@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+
+    <title>Buttons | Design System</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles for this template -->
+    <link href="../css/sidebars.css" rel="stylesheet" />
+
+    <style>
+      /* Buttons */
+      .property-default {
+        max-width: 320px; /* Max width for the whole component */
+        min-width: 250px;
+        width: 100%;
+        height: 100px;
+      }
+
+      .property-default .overlap-group {
+        position: relative;
+        height: 100px;
+        width: 100%;
+      }
+
+      .property-default .orange-background {
+        position: absolute;
+        width: 100%; /* Fill the container */
+        height: 87px;
+        top: 13px;
+        left: 0;
+        background-color: var(--secondary-color);
+        border-radius: 25px;
+      }
+
+      .property-default .primary-button {
+        all: unset;
+        box-sizing: border-box;
+        display: flex;
+        width: 100%;
+        max-width: 320px; /* Same max width */
+        height: 90px;
+        align-items: center;
+        justify-content: center;
+        padding: 21px 28px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--primary-color);
+        border-radius: 25px;
+      }
+
+      .property-default .text-wrapper {
+        font-family: var(--h2-font-family);
+        font-weight: var(--h2-font-weight);
+        font-size: 2rem; /* Fixed large size */
+        color: #ffffff;
+        text-align: center;
+        white-space: nowrap; /* prevent breaking */
+        overflow: hidden;
+        max-width: 90%; /* So text doesn't bump the padding */
+      }
+
+      .primary-button:hover {
+        background-color: rgba(33, 0, 94, 1);
+        cursor: pointer; /* optional, makes it clear it's clickable */
+      }
+
+      .property-disabled {
+        width: 100%;
+        max-width: 300px; /* Max width for the whole component */
+        min-width: 270px;
+        height: 100px;
+        position: relative; /* so absolute children position relative to this */
+      }
+
+      .property-disabled .overlap-group {
+        position: relative;
+        height: 100px;
+        width: 100%;
+      }
+
+      .property-disabled .orange-background {
+        position: absolute;
+        width: calc(100% - 10px); /* like your default, leaving some left padding */
+        height: 87px;
+        top: 13px;
+        left: 0;
+        background-color: #000;
+        border-radius: 25px;
+      }
+
+      .property-disabled .primary-button {
+        all: unset;
+        box-sizing: border-box;
+        display: flex;
+        width: calc(100% - 8px);
+        max-width: 286px;
+        height: 90px;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 21px 28px;
+        position: absolute;
+        top: 0;
+        left: 8px;
+        background-color: #a7a7a7;
+        border-radius: 25px;
+        transition: background-color 0.3s ease;
+      }
+
+      .property-disabled .text-wrapper {
+        font-family: var(--h2-font-family);
+        font-weight: var(--h2-font-weight);
+        font-size: 2rem; /* Fixed large size */
+        color: #000;
+        text-align: center;
+        white-space: nowrap; /* prevent breaking */
+        overflow: hidden;
+        max-width: 90%; /* So text doesn't bump the padding */
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="d-flex flex-nowrap">
+      <!-- Sidebar -->
+      <div class="flex-shrink-0 p-3 sidebar" style="width: 200px;">
+        <a
+          href="../index.html"
+          class="d-flex align-items-center text-center pb-3 mb-3 link-dark text-decoration-none border-bottom"
+        >
+          <img alt="Juli Lim's Logo" src="../logos/color.png" width="100%" />
+        </a>
+
+        <ul class="list-unstyled ps-0">
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#foundations-collapse"
+              aria-expanded="false"
+            >
+              Foundations
+            </button>
+            <div class="collapse" id="foundations-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li>
+                  <a
+                    href="../foundation/type.html"
+                    class="link-dark d-inline-flex text-decoration-none rounded"
+                    >Typography</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../foundation/color.html"
+                    class="link-dark d-inline-flex text-decoration-none rounded"
+                    >Color</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../foundation/logo.html"
+                    class="link-dark d-inline-flex text-decoration-none rounded"
+                    >Logo</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#components-collapse"
+              aria-expanded="true"
+            >
+              Components
+            </button>
+            <div class="collapse show" id="components-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li>
+                  <a
+                    href="#"
+                    class="link-dark d-inline-flex text-decoration-none rounded"
+                    >Buttons</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="component2.html"
+                    class="link-dark d-inline-flex text-decoration-none rounded"
+                    >Navbar</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="component3.html"
+                    class="link-dark d-inline-flex text-decoration-none rounded"
+                    >Footer</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#patterns-collapse"
+              aria-expanded="false"
+            >
+              Page Patterns
+            </button>
+            <div class="collapse" id="patterns-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li>
+                  <a
+                    href="../patterns/page1.html"
+                    class="link-dark d-inline-flex text-decoration-none rounded"
+                    >Homepage</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../patterns/page2.html"
+                    class="link-dark d-inline-flex text-decoration-none rounded"
+                    >Resume</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="b-example-divider b-example-vr"></div>
+
+      <!-- Page Content -->
+      <div class="container-fluid overflow-auto">
+        <div class="row p-5">
+          <div id="content">
+            <h2>Buttons</h2>
+            <br />
+
+            <h4>Primary Button</h4>
+            <div class="property-default" aria-label="Default button">
+              <div class="overlap-group">
+                <div class="orange-background"></div>
+                <button class="primary-button">
+                  <div class="text-wrapper">button</div>
+                </button>
+              </div>
+            </div>
+            <br />
+
+            <!-- Code example - this is what the prism.js and css are for added in this page - replace: all '<' with &lt; and  '>' with &gt; and all quotes with &quot; -->
+            <div class="col code-background">
+              <pre class="language-markup">
+<code>
+  &lt;div class=&quot;property-default&quot; aria-label=&quot;Default button&quot;&gt;
+    &lt;div class=&quot;overlap-group&quot;&gt;
+      &lt;div class=&quot;orange-background&quot;&gt;&lt;/div&gt;
+      &lt;button class=&quot;primary-button&quot;&gt;
+        &lt;div class=&quot;text-wrapper&quot;&gt;button&lt;/div&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</code>
+              </pre>
+            </div>
+
+            <br /><br />
+
+            <h4>Disabled Button</h4>
+            <div class="property-disabled" aria-label="Disabled button: not clickable">
+              <div class="overlap-group">
+                <div class="orange-background"></div>
+                <button class="primary-button">
+                  <div class="text-wrapper">button</div>
+                </button>
+              </div>
+            </div>
+            <br />
+            <div class="col code-background">
+              <pre class="language-markup">
+<code>
+  &lt;div class=&quot;property-disabled&quot; aria-label=&quot;Disabled button: not clickable&quot;&gt;
+    &lt;div class=&quot;overlap-group&quot;&gt;
+      &lt;div class=&quot;orange-background&quot;&gt;&lt;/div&gt;
+      &lt;button class=&quot;primary-button&quot;&gt;
+        &lt;div class=&quot;text-wrapper&quot;&gt;button&lt;/div&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</code>
+              </pre>
+            </div>
+
+            <br />
+
+            <div class="usage&accessibility">
+              <h4>Usage</h4>
+              <p>
+                Primary Button - The primary button style is designated for the
+                page’s most important call to action.
+              </p>
+              <p>
+                Disabled Button - A disabled button is used to indicate that an
+                action is currently unavailable.
+              </p>
+              <br />
+
+              <h4>Accessibility</h4>
+              <p>
+                Ensure all buttons have descriptive aria-label attributes and
+                provide sufficient color contrast between text and backgrounds.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

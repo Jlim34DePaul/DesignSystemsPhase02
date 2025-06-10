@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+
+    <title>Index | Design System</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link href="css/sidebars.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <main class="d-flex flex-nowrap">
+
+      <!-- Sidebar -->
+      <div class="flex-shrink-0 p-3 sidebar" style="width: 200px;">
+        <img src="logos/color.png" alt="Juli Lim's Logo" width="100%">
+
+        <ul class="list-unstyled ps-0">
+
+          <!-- Foundations -->
+          <li class="mb-1">
+            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#foundations-collapse" aria-expanded="false">
+              Foundations
+            </button>
+            <div class="collapse" id="foundations-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="foundation/type.html" class="link-dark d-inline-flex text-decoration-none rounded">Typography</a></li>
+                <li><a href="foundation/color.html" class="link-dark d-inline-flex text-decoration-none rounded">Color</a></li>
+                <li><a href="foundation/logo.html" class="link-dark d-inline-flex text-decoration-none rounded">Logo</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <!-- Components -->
+          <li class="mb-1">
+            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#components-collapse" aria-expanded="false">
+              Components
+            </button>
+            <div class="collapse" id="components-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="components/component1.html" class="link-dark d-inline-flex text-decoration-none rounded">Buttons</a></li>
+                <li><a href="components/component2.html" class="link-dark d-inline-flex text-decoration-none rounded">Navbar</a></li>
+                <li><a href="components/component3.html" class="link-dark d-inline-flex text-decoration-none rounded">Footer</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <!-- Page Patterns -->
+          <li class="mb-1">
+            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#patterns-collapse" aria-expanded="false">
+              Page Patterns
+            </button>
+            <div class="collapse" id="patterns-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="patterns/page1.html" class="link-dark d-inline-flex text-decoration-none rounded">Homepage</a></li>
+                <li><a href="patterns/page2.html" class="link-dark d-inline-flex text-decoration-none rounded">Resume</a></li>
+              </ul>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+      <div class="b-example-divider b-example-vr"></div>
+
+      <!-- Page Content -->
+      <div class="container-fluid overflow-auto">
+        <div class="row p-5">
+          <div id="content">
+            <h2>Juli Lim's Portfolio Design</h2>
+            <br>
+
+            <h4>About</h4>
+            <p>Welcome to the visual backbone of my portfolio design! A design system built to showcase the unity and style of its elements.</p>
+            <br><br>
+
+            <p><strong>This website contains the following categories:</strong></p>
+            <br>
+
+            <h4>Foundations</h4>
+            <p>Outlines the foundational elements of the design system, including typography hierarchy, color palette, and logo variations.</p>
+            <br>
+
+            <h4>Components</h4>
+            <p>Highlights the reusable components used to build the portfolio website, such as navigation bars, footers, and buttons.</p>
+            <br><br>
+
+            <h4>Page Patterns</h4>
+            <p>Presents visual guidelines for three variations of the homepage and resume page.</p>
+            <br>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="js/sidebars.js"></script>
+  </body>
+</html>
